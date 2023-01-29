@@ -1,0 +1,2122 @@
+<!DOCTYPE html>
+<html lang="zh" amp>
+  <head>
+    <title>首页 | Emoji表情符号辞典 📓 | EmojiAll官网</title>
+    <meta charset="UTF-8" />
+    <!-- <script async src="https://cdn.ampproject.org/v0.js"></script> -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+    <link rel="icon" href="/favicon.ico" type="image/x-ico" />
+    <meta name="author" content="hsy" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="css/dict-web.css" />
+    <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> -->
+    <!-- <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script> -->
+    <link rel="stylesheet" href="css/emojiartgenerator.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- 头部 -->
+    <header>
+      <div class="container-fluid">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-lg-auto logo">
+            <a href="./" title="首页">
+              <amp-img
+                src="./img/logo-white.png"
+                alt="logo"
+                width="100"
+                height="100"
+                layout="responsive"
+              >
+              </amp-img>
+              emojiall<sup>©</sup>
+            </a>
+          </div>
+
+          <div class="col-auto nav_switch_box">
+            <label class="nav_switch" for="nav_filter"><i class="iconfont iconcontrol"></i></label>
+            <label class="nav_switch" for="nav_mobile"><i class="iconfont iconmenu"></i></label>
+            <label class="nav_switch" for="nav_search"><i class="iconfont iconsearch"></i></label>
+            <a class="nav_switch" href=""><i class="iconfont iconuser"></i></a>
+            <label class="nav_switch" for="lang"><i class="iconfont iconfanyijianli"></i></label>
+          </div>
+          <input type="checkbox" id="nav_mobile" />
+          <input type="checkbox" id="nav_search" />
+          <input type="checkbox" id="lang" />
+          <label class="all_lang_shadow" for="nav_mobile"></label>
+          <!-- 去掉d-flex -->
+          <div class="col top_search_wrapper">
+            <div class="top_search">
+              <a
+                class="search_advance_btn d-flex justify-content-center align-items-center radius_1 bg_orange text_white fontsize_1x25x emoji_font mr_1"
+                href="/en/search"
+                ><i class="iconfont iconequalizer-line"></i
+              ></a>
+              <form
+                class="d-flex input-wrapper relative grow"
+                action="/en/search_results"
+                method="get"
+                id="form"
+              >
+                <input
+                  type="text"
+                  class="grow"
+                  name="keywords"
+                  value=""
+                  id="autocomplete-ajax"
+                  autocomplete="off"
+                  placeholder="Emoji(s) / Keywords / Code"
+                  required=""
+                />
+                <div class="d-flex align-items-center hide" id="disable-loading">
+                  <img src="/img/translate-loading.svg" alt="" width="20" height="20" />
+                </div>
+                <input type="submit" value="🔍️" />
+                <div
+                  class="shadow border radius_1 absolute l_0 t_100 w-100 bg_white fontsize_1x overflow_hidden font_global hide"
+                  id="selction-ajax"
+                  style="transform: translateY(2px)"
+                >
+                  <div class="asynchronous small">
+                    <div class="loading p-2 hide">
+                      <img src="/img/translate-loading.svg" alt="" width="20" height="20" />
+                    </div>
+                  </div>
+                  <div class="asynchronous overflow_hidden small">
+                    <div class="border_bottom hot_search">
+                      <a
+                        class="stronger row no-gutters justify-content-between align-items-center p-2 mb_0 bg_white"
+                        href="/en/top-daily/en"
+                        >Popular Emoji: <i class="iconfont iconright text_silver x_small"></i
+                      ></a>
+                      <div class="p-x1y1 row no-gutters mb_half">
+                        <a
+                          class="p-x1y0 radius_1 bg_silver mr_1 mb_sm_half emoji"
+                          href="/en/emoji/%F0%9F%AB%B6"
+                          title="heart hands"
+                          >🫶</a
+                        ><a
+                          class="p-x1y0 radius_1 bg_silver mr_1 mb_sm_half emoji"
+                          href="/en/emoji/%F0%9F%AB%A0"
+                          title="melting face"
+                          >🫠</a
+                        ><a
+                          class="p-x1y0 radius_1 bg_silver mr_1 mb_sm_half emoji"
+                          href="/en/emoji/%F0%9F%A4%AD"
+                          title="face with hand over mouth"
+                          >🤭</a
+                        ><a
+                          class="p-x1y0 radius_1 bg_silver mr_1 mb_sm_half emoji"
+                          href="/en/emoji/%F0%9F%AB%B0"
+                          title="hand with index finger and thumb crossed"
+                          >🫰</a
+                        ><a
+                          class="p-x1y0 radius_1 bg_silver mr_1 mb_sm_half emoji"
+                          href="/en/emoji/%F0%9F%A4%8C"
+                          title="pinched fingers"
+                          >🤌</a
+                        ><a
+                          class="p-x1y0 radius_1 bg_silver mr_1 mb_sm_half emoji"
+                          href="/en/emoji/%F0%9F%A7%90"
+                          title="face with monocle"
+                          >🧐</a
+                        ><a
+                          class="p-x1y0 radius_1 bg_silver mr_1 mb_sm_half emoji"
+                          href="/en/emoji/%F0%9F%A5%B9"
+                          title="face holding back tears"
+                          >🥹</a
+                        ><a
+                          class="p-x1y0 radius_1 bg_silver mr_1 mb_sm_half emoji"
+                          href="/en/emoji/%F0%9F%AB%A3"
+                          title="face with peeking eye"
+                          >🫣</a
+                        ><a
+                          class="p-x1y0 radius_1 bg_silver mr_1 mb_sm_half emoji"
+                          href="/en/emoji/%F0%9F%AA%AC"
+                          title="hamsa"
+                          >🪬</a
+                        ><a
+                          class="p-x1y0 radius_1 bg_silver mr_1 mb_sm_half emoji"
+                          href="/en/emoji/%F0%9F%AB%A1"
+                          title="saluting face"
+                          >🫡</a
+                        >
+                      </div>
+                    </div>
+                    <div class="border_bottom hot_search">
+                      <a
+                        class="stronger row no-gutters justify-content-between align-items-center p-2 mb_0 bg_white"
+                        href="/en/search_results?type=image"
+                        >Popular emoji pictures:
+                        <i class="iconfont iconright text_silver x_small"></i
+                      ></a>
+                      <div class="p-x1y1 row no-gutters mb_half">
+                        <a
+                          class="p-2 radius_1 bg_mosaic bg_size_s mr_1 mb_half border"
+                          href="/en/image/%F0%9F%AB%A8"
+                          title="shaking face"
+                          ><img
+                            src="/images/60/emojipedia/1fae8.png"
+                            alt=""
+                            width="30px"
+                            height="30px" /></a
+                        ><a
+                          class="p-2 radius_1 bg_mosaic bg_size_s mr_1 mb_half border"
+                          href="/en/image/%F0%9F%A5%B9"
+                          title="face holding back tears"
+                          ><img
+                            src="/images/60/apple/1f979.png"
+                            alt=""
+                            width="30px"
+                            height="30px" /></a
+                        ><a
+                          class="p-2 radius_1 bg_mosaic bg_size_s mr_1 mb_half border"
+                          href="/en/image/%E2%98%BB"
+                          title="Black Smiling Face"
+                          ><img
+                            src="/images/60/microsoft/263b.png"
+                            alt=""
+                            width="30px"
+                            height="30px" /></a
+                        ><a
+                          class="p-2 radius_1 bg_mosaic bg_size_s mr_1 mb_half border"
+                          href="/en/image/%F0%9F%A6%89"
+                          title="owl"
+                          ><img
+                            src="/images/60/facebook/1f989.png"
+                            alt=""
+                            width="30px"
+                            height="30px" /></a
+                        ><a
+                          class="p-2 radius_1 bg_mosaic bg_size_s mr_1 mb_half border"
+                          href="/en/image/%F0%9F%A4%AE"
+                          title="face vomiting"
+                          ><img
+                            src="/images/60/emojidex/1f92e.png"
+                            alt=""
+                            width="30px"
+                            height="30px" /></a
+                        ><a
+                          class="p-2 radius_1 bg_mosaic bg_size_s mr_1 mb_half border"
+                          href="/en/image/%F0%9F%AB%A0"
+                          title="melting face"
+                          ><img
+                            src="/images/60/twitter/1fae0.png"
+                            alt=""
+                            width="30px"
+                            height="30px" /></a
+                        ><a
+                          class="p-2 radius_1 bg_mosaic bg_size_s mr_1 mb_half border"
+                          href="/en/image/%E2%9D%A4%EF%B8%8F%E2%80%8D%F0%9F%94%A5"
+                          title="heart on fire"
+                          ><img
+                            src="/images/60/samsung/2764-fe0f-200d-1f525.png"
+                            alt=""
+                            width="30px"
+                            height="30px" /></a
+                        ><a
+                          class="p-2 radius_1 bg_mosaic bg_size_s mr_1 mb_half border"
+                          href="/en/image/%F0%9F%90%BB"
+                          title="bear"
+                          ><img
+                            src="/images/60/htc/1f43b.png"
+                            alt=""
+                            width="30px"
+                            height="30px" /></a
+                        ><a
+                          class="p-2 radius_1 bg_mosaic bg_size_s mr_1 mb_half border"
+                          href="/en/image/%E2%9D%A4%EF%B8%8F%E2%80%8D%F0%9F%A9%B9"
+                          title="mending heart"
+                          ><img
+                            src="/images/60/joypixels/2764-fe0f-200d-1fa79.png"
+                            alt=""
+                            width="30px"
+                            height="30px" /></a
+                        ><a
+                          class="p-2 radius_1 bg_mosaic bg_size_s mr_1 mb_half border"
+                          href="/en/image/%F0%9F%8C%88"
+                          title="rainbow"
+                          ><img
+                            src="/images/60/au-kddi/1f308.png"
+                            alt=""
+                            width="30px"
+                            height="30px"
+                        /></a>
+                      </div>
+                    </div>
+                    <div class="border_bottom hot_search">
+                      <a
+                        class="stronger row no-gutters justify-content-between align-items-center p-2 mb_0 bg_white"
+                        href="/en/top-list"
+                        >Hot Keywords: <i class="iconfont iconright text_silver x_small"></i
+                      ></a>
+                      <div class="p-x1y1 row no-gutters mb_half">
+                        <a
+                          class="p-x0y0 radius_1 mr_1 text_silver"
+                          href="/en/search_results?keywords=pin"
+                          >pin</a
+                        ><a
+                          class="p-x0y0 radius_1 mr_1 text_silver"
+                          href="/en/search_results?keywords=music"
+                          >music</a
+                        ><a
+                          class="p-x0y0 radius_1 mr_1 text_silver"
+                          href="/en/search_results?keywords=heart"
+                          >heart</a
+                        ><a
+                          class="p-x0y0 radius_1 mr_1 text_silver"
+                          href="/en/search_results?keywords=sex"
+                          >sex</a
+                        ><a
+                          class="p-x0y0 radius_1 mr_1 text_silver"
+                          href="/en/search_results?keywords=moon"
+                          >moon</a
+                        ><a
+                          class="p-x0y0 radius_1 mr_1 text_silver"
+                          href="/en/search_results?keywords=gift"
+                          >gift</a
+                        ><a
+                          class="p-x0y0 radius_1 mr_1 text_silver"
+                          href="/en/search_results?keywords=numbers"
+                          >numbers</a
+                        ><a
+                          class="p-x0y0 radius_1 mr_1 text_silver"
+                          href="/en/search_results?keywords=star"
+                          >star</a
+                        ><a
+                          class="p-x0y0 radius_1 mr_1 text_silver"
+                          href="/en/search_results?keywords=money"
+                          >money</a
+                        ><a
+                          class="p-x0y0 radius_1 mr_1 text_silver"
+                          href="/en/search_results?keywords=beach"
+                          >beach</a
+                        ><a
+                          class="p-x0y0 radius_1 mr_1 text_silver"
+                          href="/en/search_results?keywords=porn"
+                          >porn</a
+                        >
+                      </div>
+                    </div>
+                    <div class="row no-gutters hot_search">
+                      <div class="col">
+                        <div class="">
+                          <p class="p-2 mb_0 bg_white">Try:</p>
+                          <div class="p-x1y1 row no-gutters mb_half">
+                            <a
+                              class="p-x0y0 radius_1 mr_1 text_silver"
+                              href="/en/emojis/%F0%9F%90%8A%F0%9F%98%AD"
+                              ><span class="emoji_font line">🐊😭</span></a
+                            >
+                            <a
+                              class="p-x0y0 radius_1 mr_1 text_silver"
+                              href="/en/search_results?keywords=Crocodile+tears"
+                              >Crocodile tears</a
+                            ><a
+                              class="p-x0y0 radius_1 mr_1 text_silver text_blue"
+                              href="/en/emoji-translator-page"
+                              >Emoji Translator</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col history_record_box hide">
+                        <div class="">
+                          <p
+                            class="row no-gutters justify-content-between align-items-center p-2 mb_0 bg_white"
+                          >
+                            History record:
+                            <a href="javascript:;" class="text_silver x_small clear_history_record"
+                              >clear</a
+                            >
+                          </p>
+                          <div class="p-x1y1 row no-gutters mb_half history_record"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="asynchronous overflow_hidden small selction-box"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <nav class="col-auto nav">
+            <h2 class="nav_title">
+              导航
+              <label for="nav_mobile"><i class="iconfont iconclose"></i></label>
+            </h2>
+            <ul class="row no-gutters">
+              <!-- 删除大部分class -->
+              <li class="col-auto">
+                <a class="active" href="https://dict.emojiall.com"
+                  >emoji词典 <i class="iconfont iconcaret-down"></i
+                ></a>
+                <ul>
+                  <li>
+                    <a href="">全部emoji</a>
+                  </li>
+                  <li>
+                    <a href="">所有分类</a>
+                  </li>
+                  <li>
+                    <a href="">版本</a>
+                  </li>
+                  <li>
+                    <a href="">专题、热词和梗</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="col-auto">
+                <a href="https://copy.emojiall.com">emoji复制</a>
+              </li>
+              <li class="col-auto">
+                <a href="https://blog.emojiall.com">emoji新闻</a>
+              </li>
+              <li class="col-auto">
+                <a href="">emoji转换 <i class="iconfont iconcaret-down"></i></a>
+                <ul>
+                  <li>
+                    <a href="">转译emoji</a>
+                  </li>
+                  <li>
+                    <a href="">转译汉字</a>
+                  </li>
+                  <li>
+                    <a href="">emoji加密解密</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- 新功能和需要强提醒的功能在这里加new -->
+              <li class="col-auto">
+                <a class="new" href="">emoji游戏</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="side-menu">
+            <label class="all_lang_shadow" for="lang"></label>
+            <div class="all_lang">
+              <h2>
+                选择语言
+                <label for="lang"><i class="iconfont iconclose"></i></label>
+              </h2>
+              <ul>
+                <li><a class="active" href="">简体中文</a></li>
+                <!-- 当前语言需要有active -->
+                <li><a href="">繁體中文</a></li>
+                <li><a href="">العربية</a></li>
+                <li><a href="">English</a></li>
+                <li><a href="">Français</a></li>
+                <li><a href="">Deutsch</a></li>
+                <li><a href="">العربية</a></li>
+                <li><a href="">简体中文</a></li>
+                <li><a href="">繁體中文</a></li>
+                <li><a href="">English</a></li>
+                <li><a href="">Français</a></li>
+                <li><a href="">Deutsch</a></li>
+                <li><a href="">العربية</a></li>
+                <li><a href="">简体中文</a></li>
+                <li><a href="">繁體中文</a></li>
+                <li><a href="">English</a></li>
+                <li><a href="">Français</a></li>
+                <li><a href="">Deutsch</a></li>
+                <li><a href="">العربية</a></li>
+                <li><a href="">简体中文</a></li>
+                <li><a href="">繁體中文</a></li>
+                <li><a href="">English</a></li>
+                <li><a href="">Français</a></li>
+                <li><a href="">Deutsch</a></li>
+                <li><a href="">العربية</a></li>
+                <li><a href="">简体中文</a></li>
+                <li><a href="">繁體中文</a></li>
+                <li><a href="">English</a></li>
+                <li><a href="">Français</a></li>
+                <li><a href="">Deutsch</a></li>
+                <li><a href="">العربية</a></li>
+                <li><a href="">简体中文</a></li>
+                <li><a href="">繁體中文</a></li>
+                <li><a href="">English</a></li>
+                <li><a href="">Français</a></li>
+                <li><a href="">Deutsch</a></li>
+                <li><a href="">العربية</a></li>
+                <li><a href="">简体中文</a></li>
+                <li><a href="">繁體中文</a></li>
+                <li><a href="">English</a></li>
+                <li><a href="">Français</a></li>
+                <li><a href="">Deutsch</a></li>
+                <li><a href="">العربية</a></li>
+                <li><a href="">简体中文</a></li>
+                <li><a href="">繁體中文</a></li>
+                <li><a href="">English</a></li>
+                <li><a href="">Français</a></li>
+                <li><a href="">Deutsch</a></li>
+                <li><a href="">العربية</a></li>
+                <li><a href="">简体中文</a></li>
+                <li><a href="">繁體中文</a></li>
+                <li><a href="">English</a></li>
+                <li><a href="">Français</a></li>
+                <li><a href="">Deutsch</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 内容区 -->
+    <div class="body_warp row no-gutters">
+      <section class="main col">
+        <!-- 右侧板块 -->
+        <div class="content_right">
+          <div class="index-banner">
+            <!-- banner动画部分 -->
+            <div class="banner-animation container">
+              <div class="banner-emojis">
+                <div class="line-row yy06" id="⛰️"></div>
+                <div class="line-row yy01" id="🌳🌳🌳🌳🌳🌳🌳🌳"></div>
+                <div class="line-row yy02" id="🌲🌲🌲🌲🌲🌲"></div>
+                <div class="line-row yy03" id="🍃"></div>
+                <div class="line-row yy04" id="☁️☁️☁️"></div>
+                <div class="line-row yy05" id="🌞️"></div>
+                <div class="line-row yy07" id="🏘️"></div>
+                <div class="line-row yy08" id="🏠️"></div>
+                <div class="line-row yy09" id="🏢"></div>
+                <div class="line-row yy17" id="🎡"></div>
+                <div class="line-row yy18" id="🎪"></div>
+                <div class="line-row yy16" id="🌳🌳🌳🌳🌳🌳🌳️"></div>
+                <div class="line-row yy14" id="🌻🌷🌻🌷🌻"></div>
+                <div class="line-row yy15" id="🐕️"></div>
+                <div class="line-row yy11" id="🚶"></div>
+                <div class="line-row yy19" id="☁️️"></div>
+                <div class="line-row yy12" id="🚌"></div>
+                <div class="line-row yy10" id="🚴"></div>
+                <div class="line-row yy13" id="✈️"></div>
+                <div class="line-row snow-animate02"></div>
+                <div class="line-row snow-animate03"></div>
+                <!-- 标语 -->
+                <h1 class="text_animate_bg">emoji中文网</h1>
+                <!-- 其他语言时文本则显示emojiall -->
+                <h2 class="text_animate_ro">
+                  <span>
+                    <i class="text_animate_bg">这里有很全面的EMOJI表情</i>
+                    <i class="text_animate_bg">提供每个EMOJI的意思</i>
+                    <i class="text_animate_bg">有方便的复制工具</i>
+                    <i class="text_animate_bg">有实时的EMOJI资讯</i>
+                    <i class="text_animate_bg">有休闲益智的小游戏</i>
+                  </span>
+                </h2>
+              </div>
+            </div>
+          </div>
+          <!-- 置顶文章 -->
+          <div class="topping">
+            <div class="container">
+              <div class="topping_wrapper">
+                <p class="mb-0">
+                  <a href=""
+                    ><span class="emoji_font line">🔥</span>emoji的高级玩法 -
+                    独家全新功能介绍以及往期功能汇总</a
+                  >
+                </p>
+                <a href="" class="check_links fontsize_2x"><i class="iconfont iconlink"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- 内容区 -->
+          <div class="content_body">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="emoji_card_list">
+                      <div class="p-xs">
+                        <div id="stats">
+                          <form>
+                            <div class="row align-items-center">
+                              <div class="mb_half col-6 col-lg-4">
+                                <div class="row no-gutters align-items-center">
+                                  <label class="col-auto" for="height">Height </label>
+                                  <input
+                                    class="col grow"
+                                    id="height"
+                                    name="height"
+                                    type="number"
+                                    value="10"
+                                    min="5"
+                                    max="20"
+                                    step="1"
+                                    style="
+                                      border: 1px solid #ddd;
+                                      border-radius: 5px;
+                                      height: 32px;
+                                      margin-left: 10px;
+                                    "
+                                  />
+                                </div>
+                              </div>
+                              <div class="mb_half col-6 col-lg-4">
+                                <div class="row no-gutters align-items-center">
+                                  <label class="col-auto" for="width">Width </label>
+                                  <input
+                                    class="col grow"
+                                    id="width"
+                                    name="width"
+                                    type="number"
+                                    value="10"
+                                    min="5"
+                                    max="20"
+                                    step="1"
+                                    style="
+                                      border: 1px solid #ddd;
+                                      border-radius: 5px;
+                                      height: 32px;
+                                      margin-left: 10px;
+                                    "
+                                  />
+                                </div>
+                              </div>
+                              <div class="mb_half col-12 col-lg-4">
+                                <button
+                                  id="resize"
+                                  class="p-2 bg_blue border_none text_white radius_1 pointer w-100"
+                                >
+                                  resize
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                          <div id="current-selection">
+                            please select emoji:
+                            <span
+                              class="d-inline-block p-x0y0 border border_currentColor radius_1 text_blue"
+                              >😍</span
+                            >
+                          </div>
+                        </div>
+                        <div id="main">
+                          <div id="side-tool-set"></div>
+                          <div id="board" class="mb_half"></div>
+                        </div>
+                        <div class="row mb_half">
+                          <div class="col-auto">
+                            <button
+                              class="p-ss bg_blue border_none text_white radius_1 pointer"
+                              id="copy"
+                            >
+                              copy text to clipboard
+                            </button>
+                          </div>
+                          <div class="col-auto">
+                            <button
+                              id="to-picture"
+                              class="p-ss bg_none border border_currentColor text_blue radius_1 pointer"
+                            >
+                              download picture
+                            </button>
+                          </div>
+                        </div>
+                        <div id="share-buttons">
+                          <!-- facebook -->
+                          <a class="facebook" target="blank"
+                            ><svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 512 512"
+                              width="1.5rem"
+                              height="1.5rem"
+                              fill="#1877F2"
+                            >
+                              <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                              <path
+                                d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                              /></svg
+                          ></a>
+
+                          <!-- twitter -->
+                          <a class="twitter" target="blank"
+                            ><svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 512 512"
+                              width="1.5rem"
+                              height="1.5rem"
+                              fill="#4c9df1"
+                            >
+                              <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                              <path
+                                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                              /></svg
+                          ></a>
+
+                          <!-- linkedin -->
+                          <a class="linkedin" target="blank">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 448 512"
+                              width="1.5rem"
+                              height="1.5rem"
+                              fill="#0A66C2"
+                            >
+                              <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                              <path
+                                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                              />
+                            </svg>
+                          </a>
+
+                          <!-- reddit -->
+                          <a class="reddit" target="blank">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 512 512"
+                              width="1.5rem"
+                              height="1.5rem"
+                              fill="#FF4500"
+                            >
+                              "
+                              <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                              <path
+                                d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                        <script src="js/html2canvas.min.js"></script>
+                        <script src="js/emojiartgenerator.js" type="module"></script>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="right_side col">
+                  <div class="content_sidebar content_sticky">
+                    <div class="widget">
+                      <div class="widget_wrapper">
+                        <div class="popular_emoji">
+                          <div class="popular_list">
+                            <a class="emoji_font line tooltip" href=""
+                              >🥰<span class="tooltip_info">喜笑颜开</span></a
+                            >
+                            <a class="emoji_font line tooltip" href=""
+                              >😂<span class="tooltip_info">笑哭了</span></a
+                            >
+                            <a class="emoji_font line tooltip" href=""
+                              >😍<span class="tooltip_info">花痴</span></a
+                            >
+                            <a class="emoji_font line tooltip" href=""
+                              >🍓<span class="tooltip_info">草莓</span></a
+                            >
+                            <a class="emoji_font line tooltip" href=""
+                              >🐵<span class="tooltip_info">猴子</span></a
+                            >
+                          </div>
+                          <h2>
+                            <a href="">最流行的Emoji</a>
+                          </h2>
+                          <a class="more_link_ex" href=""><i class="iconfont iconright"></i></a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="widget">
+                      <h2>
+                        <a href="">专题</a>
+                      </h2>
+                      <div class="widget_wrapper py-2">
+                        <div class="widget-content hot">
+                          <!-- 近期节日、热门的专题，可以在这里加hot -->
+                          <div class="widget_box d-flex align-items-center">
+                            <a class="vcard emoji_font" href="">🐭</a>
+                            <a class="col truncate px-0" href="">鼠年</a>
+                          </div>
+                        </div>
+
+                        <div class="widget-content hot">
+                          <div class="widget_box d-flex align-items-center">
+                            <a class="vcard emoji_font" href="">👧</a>
+                            <a class="col truncate px-0" href="">儿童节</a>
+                          </div>
+                        </div>
+
+                        <div class="widget-content hot">
+                          <div class="widget_box d-flex align-items-center">
+                            <a class="vcard emoji_font" href="">👩</a>
+                            <a class="col truncate px-0" href="">劳动妇女节</a>
+                          </div>
+                        </div>
+                        <div class="widget-content">
+                          <div class="widget_box d-flex align-items-center">
+                            <a class="vcard emoji_font" href="">🐭</a>
+                            <a class="col truncate px-0" href="">鼠年</a>
+                          </div>
+                        </div>
+
+                        <div class="widget-content">
+                          <div class="widget_box d-flex align-items-center">
+                            <a class="vcard emoji_font" href="">👧</a>
+                            <a class="col truncate px-0" href="">儿童节</a>
+                          </div>
+                        </div>
+
+                        <div class="widget-content">
+                          <div class="widget_box d-flex align-items-center">
+                            <a class="vcard emoji_font" href="">👩</a>
+                            <a class="col truncate px-0" href="">劳动妇女节</a>
+                          </div>
+                        </div>
+                        <div class="widget-content">
+                          <div class="widget_box d-flex align-items-center">
+                            <a class="vcard emoji_font" href="">👩</a>
+                            <a class="col truncate px-0" href="">劳动妇女节</a>
+                          </div>
+                        </div>
+
+                        <div class="widget-content more_link">
+                          <div class="widget_box">
+                            <hr class="mt-0" />
+                            <a class="more_link_btn" href="">查看全部 ( 32 ) </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="widget">
+                      <h2>
+                        <a href="">最新文章</a>
+                      </h2>
+                      <div class="widget_wrapper py-2">
+                        <div class="widget-content">
+                          <div class="widget_box">
+                            <a class="article_box" href="">
+                              <!-- 这个H4中的emoji，是原网站没有的，pedia的文章有，我也觉得有emoji搭配文字会生动、好看，然而他们文章中的标题文本中并没有emoji，说明这emoji是个词条，只是在特定地方显示出来而已，我们可能也要新建一个词条 -->
+                              <h4 class="article_title">
+                                <span class="emoji_font line">📕</span
+                                >独家全新功能介绍以及往期功能汇总
+                              </h4>
+                              <p class="article_meta">03 03, 2020</p>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="widget-content">
+                          <div class="widget_box">
+                            <a class="article_box" href="">
+                              <h4 class="article_title">
+                                <span class="emoji_font line">😂</span
+                                >春节到女神节期间，大家的记忆力都减退了，吗？
+                              </h4>
+                              <p class="article_meta">03 03, 2020</p>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="widget-content">
+                          <div class="widget_box">
+                            <a class="article_box" href="">
+                              <h4 class="article_title">
+                                <span class="emoji_font line">🙃</span
+                                >回顾2019，哪个emoji能代表你的这一年
+                              </h4>
+                              <p class="article_meta">03 03, 2020</p>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="widget-content more_link">
+                          <div class="widget_box">
+                            <hr class="mt-0" />
+                            <a class="more_link_btn blue" href="">查看全部 ( 32 ) </a>
+                            <!-- 蓝色按钮，带有blue -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="widget">
+                      <h2>
+                        <a href="">分享</a>
+                      </h2>
+                      <div class="widget_wrapper py-2">
+                        <!-- 繁体、外语显示这3个社交媒体 -->
+                        <div class="widget-content">
+                          <div class="widget_box">
+                            <a class="share_link link_bg_1" href="" rel="nofollow" target="_blank"
+                              ><i class="iconfont iconfacebook"></i>facebook</a
+                            >
+                          </div>
+                        </div>
+                        <div class="widget-content">
+                          <div class="widget_box">
+                            <a class="share_link link_bg_2" href="" rel="nofollow" target="_blank"
+                              ><i class="iconfont icontwitter"></i>Twitter</a
+                            >
+                          </div>
+                        </div>
+                        <div class="widget-content">
+                          <div class="widget_box">
+                            <a class="share_link link_bg_3" href="" rel="nofollow" target="_blank"
+                              ><i class="iconfont icongoogleplus"></i>google+</a
+                            >
+                          </div>
+                        </div>
+                        <!-- 简体中文显示这3个社交媒体 -->
+                        <!-- <div class="widget-content">
+												<div class="widget_box">
+													<a class="share_link link_bg_1" href="" rel="nofollow" target="_blank"><i class="iconfont iconweibo"></i>新浪微博</a>
+												</div>
+											</div>
+											<div class="widget-content">
+												<div class="widget_box">
+													<a class="share_link link_bg_2" href="" rel="nofollow" target="_blank"><i class="iconfont icondouban1"></i>豆瓣</a>
+												</div>
+											</div>
+											<div class="widget-content">
+												<div class="widget_box">
+													<a class="share_link link_bg_3" href="" rel="nofollow" target="_blank"><i class="iconfont iconQQ"></i>QQ空间</a>
+												</div>
+											</div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 底部 -->
+        <footer>
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col">
+                <a class="logo_box" href="">
+                  <img src="./img/logo-dark.png" alt="logo" />
+                  <div class="title_box">
+                    <div>emojiall</div>
+                    <p>emoji中文网</p>
+                  </div>
+                </a>
+                <div class="about_box">
+                  <p>
+                    本网站提供最新、完整的Emoji表情符号搜索和相关内容，包括含义、代码、图片、用途、示例复制和粘贴等。
+                  </p>
+                </div>
+                <div class="socials_box">
+                  <ul>
+                    <li class="text-center x_small">
+                      <img src="/img/qrcode.jpg" alt="" />
+                      <p>公众号EMOJIALL</p>
+                    </li>
+                    <li class="text-center x_small">
+                      <img src="/img/QQqun.jpg" alt="" />
+                      <p>
+                        <a href="">QQ群774842773</a>
+                      </p>
+                    </li>
+                    <li>
+                      <div class="tooltip text_orange" rel="nofollow" target="_blank">
+                        <i class="iconfont iconwechat-fill"></i
+                        ><span class="tooltip_info"
+                          ><img src="./img/qrcode.jpg" alt="" />
+                          <p>微信公众号</p>
+                          <p>emojiall</p>
+                        </span>
+                      </div>
+                    </li>
+                    <!-- 这里微信有额外的text_orange用来强提醒 -->
+                    <li>
+                      <a class="tooltip" href="" rel="nofollow" target="_blank"
+                        ><i class="iconfont iconQQ"></i><span class="tooltip_info">QQ群</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="tooltip"
+                        href="https://www.youtube.com/c/EmojiAll"
+                        rel="nofollow"
+                        target="_blank"
+                        ><i class="iconfont iconYoutube-fill"></i
+                        ><span class="tooltip_info">Youtube</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="tooltip"
+                        href="https://twitter.com/emojiall2019"
+                        rel="nofollow"
+                        target="_blank"
+                        ><i class="iconfont icontwitter"></i
+                        ><span class="tooltip_info">Twitter</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="tooltip"
+                        href="https://www.facebook.com/emojiall/"
+                        rel="nofollow"
+                        target="_blank"
+                        ><i class="iconfont iconfacebook-fill"></i
+                        ><span class="tooltip_info">Facebook</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="tooltip"
+                        href="https://www.instagram.com/emojiall2019/"
+                        rel="nofollow"
+                        target="_blank"
+                        ><i class="iconfont iconinstagram-fill"></i
+                        ><span class="tooltip_info">Instagram</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="tooltip"
+                        href="https://emojialll.quora.com/"
+                        rel="nofollow"
+                        target="_blank"
+                        ><i class="iconfont iconquora"></i
+                        ><span class="tooltip_info">Quora</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="tooltip"
+                        href="https://www.zhihu.com/org/emojiall/answers"
+                        rel="nofollow"
+                        target="_blank"
+                        ><i class="iconfont iconzhihu-line"></i
+                        ><span class="tooltip_info">知乎</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="tooltip"
+                        href="https://weibo.com/u/3965090732"
+                        rel="nofollow"
+                        target="_blank"
+                        ><i class="iconfont iconweibo-fill"></i
+                        ><span class="tooltip_info">微博</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col quick_link y_scroll">
+                <div class="row">
+                  <div class="col">
+                    <div class="nav_menu_box">
+                      <h3>快捷导航</h3>
+                      <ul class="nav_menu">
+                        <li>
+                          <a href="">首页</a>
+                        </li>
+                        <li>
+                          <a href="">emoji字典</a>
+                        </li>
+                        <li>
+                          <a href="">emoji复制粘贴</a>
+                        </li>
+                        <li>
+                          <a href="">emoji资讯</a>
+                        </li>
+                        <li>
+                          <a class="new" href="">文字转emoji</a>
+                        </li>
+                        <!-- 新功能和需要强提醒的功能在这里加new -->
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="nav_menu_box">
+                      <h3>版本</h3>
+                      <ul class="nav_menu">
+                        <li>
+                          <a href="">emoji</a>
+                        </li>
+                        <li>
+                          <a href="">unicode</a>
+                        </li>
+                        <li>
+                          <a class="new" href="">操作系统</a>
+                        </li>
+                        <!-- 新功能和需要强提醒的功能在这里加new -->
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="nav_menu_box">
+                      <h3>关于我们</h3>
+                      <ul class="nav_menu">
+                        <li>
+                          <a href="">我们团队</a>
+                        </li>
+                        <li>
+                          <a class="new" href="">用户帮助</a>
+                        </li>
+                        <li>
+                          <a href="">联系我们</a>
+                        </li>
+                        <li>
+                          <a href="">广告投放</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="category_all_list y_scroll container">
+            <div class="row row-cols-5">
+              <div class="col">
+                <div class="nav_menu_box">
+                  <h3>
+                    <a href="">笑脸和情感</a>
+                  </h3>
+                  <ul class="nav_menu">
+                    <li>
+                      <a href="">笑脸</a>
+                    </li>
+                    <li>
+                      <a href="">表情脸</a>
+                    </li>
+                    <li>
+                      <a href="">吐舌脸</a>
+                    </li>
+                    <li>
+                      <a href="">带手脸</a>
+                    </li>
+                    <li>
+                      <a class="new" href="">中性脸-怀疑脸</a>
+                    </li>
+                    <li>
+                      <a href="">睡脸</a>
+                    </li>
+                    <li>
+                      <a href="">病脸</a>
+                    </li>
+                    <li>
+                      <a href="">带帽脸</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="nav_menu_box">
+                  <h3>
+                    <a href="">人类和身体</a>
+                  </h3>
+                  <ul class="nav_menu">
+                    <li>
+                      <a href="">笑脸</a>
+                    </li>
+                    <li>
+                      <a href="">表情脸</a>
+                    </li>
+                    <li>
+                      <a href="">吐舌脸</a>
+                    </li>
+                    <li>
+                      <a href="">带手脸</a>
+                    </li>
+                    <li>
+                      <a class="new" href="">中性脸-怀疑脸</a>
+                    </li>
+                    <li>
+                      <a href="">睡脸</a>
+                    </li>
+                    <li>
+                      <a href="">病脸</a>
+                    </li>
+                    <li>
+                      <a href="">带帽脸</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="nav_menu_box">
+                  <h3>
+                    <a href="">成分</a>
+                  </h3>
+                  <ul class="nav_menu">
+                    <li>
+                      <a href="">笑脸</a>
+                    </li>
+                    <li>
+                      <a href="">表情脸</a>
+                    </li>
+                    <li>
+                      <a href="">吐舌脸</a>
+                    </li>
+                    <li>
+                      <a class="new" href="">中性脸-怀疑脸</a>
+                    </li>
+                    <li>
+                      <a href="">睡脸</a>
+                    </li>
+                    <li>
+                      <a href="">病脸</a>
+                    </li>
+                    <li>
+                      <a href="">带帽脸</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="nav_menu_box">
+                  <h3>
+                    <a href="">动物和自然</a>
+                  </h3>
+                  <ul class="nav_menu">
+                    <li>
+                      <a href="">笑脸</a>
+                    </li>
+                    <li>
+                      <a href="">表情脸</a>
+                    </li>
+                    <li>
+                      <a href="">吐舌脸</a>
+                    </li>
+                    <li>
+                      <a href="">带手脸</a>
+                    </li>
+                    <li>
+                      <a class="new" href="">中性脸-怀疑脸</a>
+                    </li>
+                    <li>
+                      <a href="">睡脸</a>
+                    </li>
+                    <li>
+                      <a href="">病脸</a>
+                    </li>
+                    <li>
+                      <a href="">带帽脸</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="nav_menu_box">
+                  <h3>
+                    <a href="">食物和饮料</a>
+                  </h3>
+                  <ul class="nav_menu">
+                    <li>
+                      <a href="">表情脸</a>
+                    </li>
+                    <li>
+                      <a href="">吐舌脸</a>
+                    </li>
+                    <li>
+                      <a href="">带手脸</a>
+                    </li>
+                    <li>
+                      <a href="">睡脸</a>
+                    </li>
+                    <li>
+                      <a href="">病脸</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="nav_menu_box">
+                  <h3>
+                    <a href="">旅行和地点</a>
+                  </h3>
+                  <ul class="nav_menu">
+                    <li>
+                      <a href="">笑脸</a>
+                    </li>
+                    <li>
+                      <a href="">表情脸</a>
+                    </li>
+                    <li>
+                      <a href="">带手脸</a>
+                    </li>
+                    <li>
+                      <a class="new" href="">中性脸-怀疑脸</a>
+                    </li>
+                    <li>
+                      <a href="">病脸</a>
+                    </li>
+                    <li>
+                      <a href="">带帽脸</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="nav_menu_box">
+                  <h3>
+                    <a href="">活动</a>
+                  </h3>
+                  <ul class="nav_menu">
+                    <li>
+                      <a href="">笑脸</a>
+                    </li>
+                    <li>
+                      <a href="">表情脸</a>
+                    </li>
+                    <li>
+                      <a href="">吐舌脸</a>
+                    </li>
+                    <li>
+                      <a href="">带帽脸</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="nav_menu_box">
+                  <h3>
+                    <a href="">物品</a>
+                  </h3>
+                  <ul class="nav_menu">
+                    <li>
+                      <a href="">笑脸</a>
+                    </li>
+                    <li>
+                      <a href="">表情脸</a>
+                    </li>
+                    <li>
+                      <a href="">睡脸</a>
+                    </li>
+                    <li>
+                      <a href="">病脸</a>
+                    </li>
+                    <li>
+                      <a href="">带帽脸</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="nav_menu_box">
+                  <h3>
+                    <a href="">符号</a>
+                  </h3>
+                  <ul class="nav_menu">
+                    <li>
+                      <a href="">笑脸</a>
+                    </li>
+                    <li>
+                      <a href="">表情脸</a>
+                    </li>
+                    <li>
+                      <a href="">吐舌脸</a>
+                    </li>
+                    <li>
+                      <a href="">带手脸</a>
+                    </li>
+                    <li>
+                      <a class="new" href="">中性脸-怀疑脸</a>
+                    </li>
+                    <li>
+                      <a href="">带帽脸</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="nav_menu_box">
+                  <h3>
+                    <a href="">旗帜</a>
+                  </h3>
+                  <ul class="nav_menu">
+                    <li>
+                      <a href="">笑脸</a>
+                    </li>
+                    <li>
+                      <a href="">表情脸</a>
+                    </li>
+                    <li>
+                      <a href="">吐舌脸</a>
+                    </li>
+                    <li>
+                      <a href="">带手脸</a>
+                    </li>
+                    <li>
+                      <a href="">带帽脸</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="category_all_list container">
+            <div class="row">
+              <div class="col">
+                <div class="nav_menu_box">
+                  <h3>
+                    <a href="/zh-hant/platform-list">Unicode版本</a>
+                  </h3>
+                  <div
+                    class="view view-group view-id-group view-display-id-block_2 view-dom-id-889f4bc8b76f98237b76eeb09b96621b"
+                  >
+                    <div class="view-content">
+                      <ul class="nav_menu">
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-google"
+                            title="🇬 適用於安卓Android的谷歌Google表情符號列表"
+                            >Google</a
+                          >
+                        </li>
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-apple"
+                            title="🍏 適用於iPhone，iPad和macOS的Apple (蘋果) Emoji表情符號列表"
+                            >蘋果</a
+                          >
+                        </li>
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-microsoft"
+                            title="🪟 Windows(視窗)的Microsoft(微軟) Emoji表情符號列表"
+                            >微軟</a
+                          >
+                        </li>
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-facebook"
+                            title="👍 Facebook (臉書) Emoji表情符號列表"
+                            >臉書</a
+                          >
+                        </li>
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-twitter"
+                            title="🐦 Twitter推特Emoji表情符號列表"
+                            >推特</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-whatsapp" title="💬 Whatsapp Emoji表情符號列表"
+                            >Whatsapp</a
+                          >
+                        </li>
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-mozilla"
+                            title="🦊 火狐Firefox OS的Mozilla Emoji表情符號列表"
+                            >Mozilla</a
+                          >
+                        </li>
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-joypixels"
+                            title="😄 JoyPixels（EmojiOne）Emoji表情符號列表"
+                            >JoyPixels</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-emojione" title="1️⃣ EmojiOne 表情符號列表"
+                            >EmojiOne</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-emojitwo" title="2️⃣ EmojiTwo 表情符號列表"
+                            >EmojiTwo</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-openmoji" title="🆓 OpenMoji Emoji表情符號列表"
+                            >OpenMoji</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-emojidex" title="😜 EmojiDex表情符號列表"
+                            >EmojiDex</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-blobmoji" title="😄 BlobMoji 表情符號列表"
+                            >BlobMoji</a
+                          >
+                        </li>
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-samsung"
+                            title="🌌 適用於Galaxy和Galaxy Note的三星Emoji表情符號列表"
+                            >三星</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-htc" title="🇭 🇹 🇨 HTC Emoji 表情符號列表"
+                            >HTC</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-lg" title="🇱 🇬 LG Emoji表情符號列表">LG</a>
+                        </li>
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-docomo"
+                            title="🇯🇵 NTT Docomo的Emoji表情符號列表"
+                            >Docomo</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-softbank" title="📱 軟銀手機Emoji表情符號列表"
+                            >軟銀</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-aukddi" title="📶 au KDDI的Emoji表情符號列表"
+                            >Au Dddi</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-emojipedia" title="📒 Emojipedia 表情符號列表"
+                            >Emojipedia</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-qq" title="">QQ</a>
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-wechat" title="">微信</a>
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-weibo" title="">微博</a>
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-baidu" title="">百度</a>
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-douyin" title="">抖音</a>
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-bilibili" title="">Bilibili</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="nav_menu_box">
+                  <h3>
+                    <a href="/zh-hant/platform-list">Emoji版本</a>
+                  </h3>
+                  <div
+                    class="view view-group view-id-group view-display-id-block_2 view-dom-id-889f4bc8b76f98237b76eeb09b96621b"
+                  >
+                    <div class="view-content">
+                      <ul class="nav_menu">
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-google"
+                            title="🇬 適用於安卓Android的谷歌Google表情符號列表"
+                            >Google</a
+                          >
+                        </li>
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-apple"
+                            title="🍏 適用於iPhone，iPad和macOS的Apple (蘋果) Emoji表情符號列表"
+                            >蘋果</a
+                          >
+                        </li>
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-microsoft"
+                            title="🪟 Windows(視窗)的Microsoft(微軟) Emoji表情符號列表"
+                            >微軟</a
+                          >
+                        </li>
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-facebook"
+                            title="👍 Facebook (臉書) Emoji表情符號列表"
+                            >臉書</a
+                          >
+                        </li>
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-twitter"
+                            title="🐦 Twitter推特Emoji表情符號列表"
+                            >推特</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-whatsapp" title="💬 Whatsapp Emoji表情符號列表"
+                            >Whatsapp</a
+                          >
+                        </li>
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-mozilla"
+                            title="🦊 火狐Firefox OS的Mozilla Emoji表情符號列表"
+                            >Mozilla</a
+                          >
+                        </li>
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-joypixels"
+                            title="😄 JoyPixels（EmojiOne）Emoji表情符號列表"
+                            >JoyPixels</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-emojione" title="1️⃣ EmojiOne 表情符號列表"
+                            >EmojiOne</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-emojitwo" title="2️⃣ EmojiTwo 表情符號列表"
+                            >EmojiTwo</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-openmoji" title="🆓 OpenMoji Emoji表情符號列表"
+                            >OpenMoji</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-emojidex" title="😜 EmojiDex表情符號列表"
+                            >EmojiDex</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-blobmoji" title="😄 BlobMoji 表情符號列表"
+                            >BlobMoji</a
+                          >
+                        </li>
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-samsung"
+                            title="🌌 適用於Galaxy和Galaxy Note的三星Emoji表情符號列表"
+                            >三星</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-htc" title="🇭 🇹 🇨 HTC Emoji 表情符號列表"
+                            >HTC</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-lg" title="🇱 🇬 LG Emoji表情符號列表">LG</a>
+                        </li>
+                        <li class="">
+                          <a
+                            href="/zh-hant/platform-docomo"
+                            title="🇯🇵 NTT Docomo的Emoji表情符號列表"
+                            >Docomo</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-softbank" title="📱 軟銀手機Emoji表情符號列表"
+                            >軟銀</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-aukddi" title="📶 au KDDI的Emoji表情符號列表"
+                            >Au Dddi</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-emojipedia" title="📒 Emojipedia 表情符號列表"
+                            >Emojipedia</a
+                          >
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-qq" title="">QQ</a>
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-wechat" title="">微信</a>
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-weibo" title="">微博</a>
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-baidu" title="">百度</a>
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-douyin" title="">抖音</a>
+                        </li>
+                        <li class="">
+                          <a href="/zh-hant/platform-bilibili" title="">Bilibili</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="category_all_list container">
+            <div class="row">
+              <div class="col">
+                <div class="nav_menu_box">
+                  <h3>
+                    <a href="">不同平台上的emoji</a>
+                  </h3>
+                  <ul class="nav_menu">
+                    <li>
+                      <a href="">苹果</a>
+                    </li>
+                    <li>
+                      <a href="">脸书</a>
+                    </li>
+                    <li>
+                      <a href="">微软</a>
+                    </li>
+                    <li>
+                      <a href="">三星</a>
+                    </li>
+                    <li>
+                      <a href="">推特</a>
+                    </li>
+                    <li>
+                      <a href="">谷歌</a>
+                    </li>
+                    <li>
+                      <a href="">Mozilla</a>
+                    </li>
+                    <li>
+                      <a href="">LG</a>
+                    </li>
+                    <li>
+                      <a href="">HTC</a>
+                    </li>
+                    <li>
+                      <a href="">Whatsapp</a>
+                    </li>
+                    <li>
+                      <a href="">Docomo</a>
+                    </li>
+                    <li>
+                      <a href="">EmojiOne</a>
+                    </li>
+                    <li>
+                      <a href="">EmojiTwo</a>
+                    </li>
+                    <li>
+                      <a href="">BlobMoji</a>
+                    </li>
+                    <li>
+                      <a href="">软银</a>
+                    </li>
+                    <li>
+                      <a href="">JoyPixels</a>
+                    </li>
+                    <li>
+                      <a href="">EmojiDex</a>
+                    </li>
+                    <li>
+                      <a href="">tiktok</a>
+                    </li>
+                    <li>
+                      <a href="">抖音</a>
+                    </li>
+                    <li>
+                      <a href="">百度</a>
+                    </li>
+                    <li>
+                      <a href="">新浪微博</a>
+                    </li>
+                    <li>
+                      <a href="">QQ</a>
+                    </li>
+                    <li>
+                      <a href="">微信</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="category_all_list container">
+            <div class="row">
+              <div class="col">
+                <div class="nav_menu_box">
+                  <h3>友情链接</h3>
+                  <ul class="nav_menu">
+                    <li>
+                      <a href="">名录集</a>
+                    </li>
+                    <li>
+                      <a href="">查号吧</a>
+                    </li>
+                    <li>
+                      <a href="">邮政编码</a>
+                    </li>
+                    <li>
+                      <a href="">IP地址</a>
+                    </li>
+                    <li>
+                      <a href="">通查</a>
+                    </li>
+                    <li>
+                      <a href="">香港数据集</a>
+                    </li>
+                    <li>
+                      <a href="">名人企业名录</a>
+                    </li>
+                    <li>
+                      <a href="">一把刀词典合集</a>
+                    </li>
+                    <li>
+                      <a href="">114黄页名录</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+          <div class="copyright container">
+            <div class="row justify-content-lg-between align-items-center">
+              <div class="col-auto info_body">
+                © Copyrights 2020
+                <a class="text_orange" href="">EMOJIALL</a>
+              </div>
+              <div class="col-auto">
+                <a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow"
+                  >鄂B2-20110095-19</a
+                >
+                /
+                <a href="http://www.beian.gov.cn/" target="_blank" rel="nofollow"
+                  >公安备42010302001805</a
+                >
+              </div>
+              <div class="col-auto">
+                <a class="text_blue tooltip" href=""
+                  ><i class="iconfont iconsafetycertificate"></i> 法律声明</a
+                >
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+      <!-- 左侧栏 -->
+      <input type="checkbox" id="nav_filter" />
+      <!-- 开关，不可删 -->
+      <label class="all_lang_shadow" for="nav_filter"></label>
+      <div class="stick_sidebar_left col-auto">
+        <div class="bar_wrapper">
+          <h2>
+            功能菜单
+            <label for="nav_filter"><i class="iconfont iconclose"></i></label>
+          </h2>
+          <div class="article">
+            <h3>分类</h3>
+            <ul>
+              <li>
+                <div class="btn_box active">
+                  <!-- 仅在首页时，这里才有active -->
+                  <a href=""><span class="emoji_font line">👀</span> 全部Emojis</a>
+                  <span>4961</span>
+                </div>
+              </li>
+              <!-- 如果当前停留在哪个分类的页面或某个emoji详情页，那个页面对应的分类链接就需要显示为被激活状态，具体操作是给一下“实例1”处增加checked属性，给“实例2”处增加class="active" -->
+              <li>
+                <input class="menu_switch" type="checkbox" id="toggle_1" />
+                <!-- 实例1 -->
+                <div class="btn_box">
+                  <a href=""><span class="emoji_font line">😂</span> 笑脸和情感</a>
+                  <label class="btn_menu with_icon" for="toggle_1"></label>
+                </div>
+                <ul class="submenu_toggle">
+                  <li>
+                    <a href=""
+                      ><span><i class="emoji_font line">😂</i>全部</span><span>1501</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><span><i class="emoji_font line">😄</i>笑脸</span><span>961</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><span><i class="emoji_font line">😍</i>表情脸</span><span>663</span></a
+                    >
+                  </li>
+                  <!-- 实例2 -->
+                  <li>
+                    <a class="active" href=""
+                      ><span><i class="emoji_font line">😛</i>吐舌脸</span><span>600</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><span><i class="emoji_font line">🤔</i>帯手脸</span><span>530</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><span><i class="emoji_font line">🤐</i>中性脸-怀疑脸</span
+                      ><span>512</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><span><i class="emoji_font line">😴</i>睡脸</span><span>460</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><span><i class="emoji_font line">🤧</i>病脸</span><span>321</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><span><i class="emoji_font line">🤠</i>带帽脸</span><span>300</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input class="menu_switch" type="checkbox" id="toggle_3" />
+                <div class="btn_box">
+                  <a href=""><span class="emoji_font line">👌</span> 人类和身体</a>
+                  <label class="btn_menu with_icon" for="toggle_3"></label>
+                </div>
+                <ul class="submenu_toggle">
+                  <li>
+                    <a href=""><span>笑脸</span><span>961</span></a>
+                  </li>
+                  <li>
+                    <a href=""><span>表情脸</span><span>663</span></a>
+                  </li>
+                  <li>
+                    <a href=""><span>猫咪脸</span><span>200</span></a>
+                  </li>
+                  <li>
+                    <a href=""><span>猴子脸</span><span>190</span></a>
+                  </li>
+                  <li>
+                    <a href=""><span>情感</span><span>165</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input class="menu_switch" type="checkbox" id="toggle_4" />
+                <div class="btn_box">
+                  <a href=""><span class="emoji_font line">🏼</span> 成分</a>
+                  <label class="btn_menu with_icon" for="toggle_4"></label>
+                </div>
+                <ul class="submenu_toggle">
+                  <li>
+                    <a href=""><span>猫咪脸</span><span>200</span></a>
+                  </li>
+                  <li>
+                    <a href=""><span>猴子脸</span><span>190</span></a>
+                  </li>
+                  <li>
+                    <a href=""><span>情感</span><span>165</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input class="menu_switch" type="checkbox" id="toggle_5" />
+                <div class="btn_box">
+                  <a href=""><span class="emoji_font line">🐵</span> 动物和自然</a>
+                  <label class="btn_menu with_icon" for="toggle_5"></label>
+                </div>
+                <ul class="submenu_toggle">
+                  <li>
+                    <a href=""><span>笑脸</span><span>961</span></a>
+                  </li>
+                  <li>
+                    <a href=""><span>表情脸</span><span>663</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input class="menu_switch" type="checkbox" id="toggle_6" />
+                <div class="btn_box">
+                  <a href=""><span class="emoji_font line">🍓</span> 食物和饮料</a>
+                  <label class="btn_menu with_icon" for="toggle_6"></label>
+                </div>
+                <ul class="submenu_toggle">
+                  <li>
+                    <a href=""><span>笑脸</span><span>961</span></a>
+                  </li>
+                  <li>
+                    <a href=""><span>表情脸</span><span>663</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input class="menu_switch" type="checkbox" id="toggle_7" />
+                <div class="btn_box">
+                  <a href=""><span class="emoji_font line">🚌</span> 旅行和地点</a>
+                  <label class="btn_menu with_icon" for="toggle_7"></label>
+                </div>
+                <ul class="submenu_toggle">
+                  <li>
+                    <a href=""><span>笑脸</span><span>961</span></a>
+                  </li>
+                  <li>
+                    <a href=""><span>表情脸</span><span>663</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input class="menu_switch" type="checkbox" id="toggle_8" />
+                <div class="btn_box">
+                  <a href=""><span class="emoji_font line">⚽</span> 活动</a>
+                  <label class="btn_menu with_icon" for="toggle_8"></label>
+                </div>
+                <ul class="submenu_toggle">
+                  <li>
+                    <a href=""><span>笑脸</span><span>961</span></a>
+                  </li>
+                  <li>
+                    <a href=""><span>表情脸</span><span>663</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input class="menu_switch" type="checkbox" id="toggle_9" />
+                <div class="btn_box">
+                  <a href=""><span class="emoji_font line">⌚</span> 物品</a>
+                  <label class="btn_menu with_icon" for="toggle_9"></label>
+                </div>
+                <ul class="submenu_toggle">
+                  <li>
+                    <a href=""><span>笑脸</span><span>961</span></a>
+                  </li>
+                  <li>
+                    <a href=""><span>表情脸</span><span>663</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input class="menu_switch" type="checkbox" id="toggle_10" />
+                <div class="btn_box">
+                  <a href=""><span class="emoji_font line">🛑</span> 符号</a>
+                  <label class="btn_menu with_icon" for="toggle_10"></label>
+                </div>
+                <ul class="submenu_toggle">
+                  <li>
+                    <a href=""><span>笑脸</span><span>961</span></a>
+                  </li>
+                  <li>
+                    <a href=""><span>表情脸</span><span>663</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input class="menu_switch" type="checkbox" id="toggle_11" />
+                <div class="btn_box">
+                  <a href=""><span class="emoji_font line">🏁</span> 旗帜</a>
+                  <label class="btn_menu with_icon" for="toggle_11"></label>
+                </div>
+                <ul class="submenu_toggle">
+                  <li>
+                    <a href=""><span>笑脸</span><span>961</span></a>
+                  </li>
+                  <li>
+                    <a href=""><span>表情脸</span><span>663</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="article">
+            <h3>版本</h3>
+            <ul class="search_filter">
+              <li>
+                <div class="btn_box">
+                  <a class="active" href=""> unicode</a>
+                </div>
+              </li>
+              <li>
+                <div class="btn_box">
+                  <a href=""> emoji</a>
+                </div>
+              </li>
+              <li>
+                <div class="btn_box">
+                  <a href=""> 列表</a>
+                </div>
+              </li>
+              <li>
+                <div class="btn_box">
+                  <a href=""> 状态</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="article">
+            <h3>肤色</h3>
+            <div class="btn_box_landscape">
+              <a class="emoji_font tooltip" href="">👴<span class="tooltip_info">全部肤色</span></a>
+              <a class="emoji_font tooltip active" href=""
+                >👴🏻<span class="tooltip_info">较浅肤色</span></a
+              >
+              <!-- 当前页面激活时需要加上active -->
+              <a class="emoji_font tooltip" href=""
+                >👴🏼<span class="tooltip_info">中等-浅肤色</span></a
+              >
+              <a class="emoji_font tooltip" href="">👴🏽<span class="tooltip_info">中等肤色</span></a>
+              <a class="emoji_font tooltip" href=""
+                >👴🏾<span class="tooltip_info">中等-深肤色</span></a
+              >
+              <a class="emoji_font tooltip" href="">👴🏿<span class="tooltip_info">较深肤色</span></a>
+            </div>
+          </div>
+
+          <div class="article">
+            <h3>发型</h3>
+            <div class="btn_box_landscape">
+              <a class="emoji_font tooltip" href="">🦰<span class="tooltip_info">红发</span></a>
+              <a class="emoji_font tooltip active" href=""
+                >🦱<span class="tooltip_info">卷发</span></a
+              >
+              <!-- 当前页面激活时需要加上active -->
+              <a class="emoji_font tooltip" href="">🦳<span class="tooltip_info">白发</span></a>
+              <a class="emoji_font tooltip" href="">🦲<span class="tooltip_info">秃顶</span></a>
+            </div>
+          </div>
+
+          <div class="article">
+            <h3>性别</h3>
+            <div class="btn_box_landscape">
+              <a class="emoji_font tooltip" href="">👨<span class="tooltip_info">男性</span> </a>
+              <a class="emoji_font tooltip active" href=""
+                >👩<span class="tooltip_info">女性</span>
+              </a>
+              <!-- 当前页面激活时需要加上active -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ul class="stiky_menu">
+      <li>
+        <a id="totop" href="#" title="返回顶部"><i class="iconfont iconup"></i></a>
+      </li>
+    </ul>
+    <!-- 提示框 -->
+    <!-- <div class="toast bg_blue text_white radius_1 shadow on">
+		<div class="toast-body d-flex">
+			<p class="mb_0 p-s">Hello, world! This is a toast message.</p>
+			<i class="grow iconfont iconclose p-s pointer"></i>
+		</div>
+	</div> -->
+  </body>
+</html>

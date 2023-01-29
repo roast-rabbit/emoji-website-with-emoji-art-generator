@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1000 800" width="1000" height="800">
+	<style type="text/css">
+		
+	</style>
+	<defs>
+      <mask id="svg-mask-01" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+        <rect id="svg-mask-img1" x="0" y="0" width="1000" height="800" fill="white">
+            <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" dur="10s" type="translate" values="1000 0 ; 0 0; 1000 0" repeatCount="indefinite" begin="0"/>
+        </rect>
+      </mask>
+      <mask id="svg-mask-02" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
+        <rect id="svg-mask-img2" x="0" y="0" width="1000" height="800" fill="white">
+            <animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" dur="10s" type="translate" values="0 0 ; -1000 0; 0 0" repeatCount="indefinite" begin="0"/>
+        </rect>
+      </mask>
+    </defs>
+    <g xmlns="http://www.w3.org/2000/svg" id="svg-mask-image-01" mask="url(#svg-mask-01)">
+        <image xmlns:xlink="http://www.w3.org/1999/xlink" width="220" height="220" y="90" x="190" xlink:href="/images/120/microsoft/1f602.png"/>
+        <image xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" y="100" x="600" xlink:href="/images/120/blobmoji/emoji_u1f602.png"/>
+        <image xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" y="500" x="200" xlink:href="/images/120/apple/1f602.png"/>
+        <image xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" y="500" x="600" xlink:href="/images/120/facebook/1f602.png"/>
+        <image xmlns:xlink="http://www.w3.org/1999/xlink" width="272" height="272" y="255" x="370" xlink:href="/images/120/telegram/1f602.gif"/>
+    </g>
+    <g xmlns="http://www.w3.org/2000/svg" id="svg-mask-image-02" mask="url(#svg-mask-02)">
+        <image xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" y="100" x="200" xlink:href="/images/240/twitter/1f602.png"/>
+        <image xmlns:xlink="http://www.w3.org/1999/xlink" width="198" height="198" y="103" x="600" xlink:href="/images/svg/google/emoji_u1f605.svg"/>
+        <image xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" y="500" x="200" xlink:href="/images/240/emojidex/1f602.png"/>
+        <image xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" y="500" x="600" xlink:href="1f602.png"/>
+        <image xmlns:xlink="http://www.w3.org/1999/xlink" width="250" height="250" y="275" x="375" xlink:href="/images/animations/joypixels/128px/face_with_tears_of_joy.gif"/>
+    </g>
+</svg>

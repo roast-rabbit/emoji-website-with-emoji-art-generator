@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 314.2 188.3" style="enable-background:new 0 0 314.2 188.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#7561CF;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+	.st1{opacity:0.5;fill:none;stroke:#7561CF;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;}
+	.st2{opacity:0.5;}
+	.st3{fill:none;stroke:#7561CF;stroke-width:0.75;}
+	.st4{fill:#7561CF;}
+	.st5{font-family:'OpenSans-Regular';}
+	.st6{font-size:7px;}
+	.st7{font-size:6px;}
+	.st8{font-size:8px;}
+</style>
+<g id="figure_1">
+	<g id="axes_1">
+		<g id="line2d_15">
+			<g>
+				<path class="st0" d="M40.7,152.7l70.2-0.1l9.6-0.2l6.4-0.4l4.8-0.6l3.2-0.6l3.2-0.9l1.6-0.6l1.6-0.7l1.6-0.8l1.6-1l1.6-1.2
+					l1.6-1.5l1.6-1.7l1.6-2l1.6-2.4l3.2-6l0,0l1.6-3.7l1.6-4.2l1.6-4.6l1.6-5.1l3.2-11.3l8-30.2l1.6-5.5l1.6-5.1l1.6-4.6l1.6-4.2
+					l1.6-3.7l1.6-3.2l1.6-2.8l1.6-2.4l1.6-2l1.6-1.7l1.6-1.5l1.6-1.2l1.6-1l1.6-0.8l3.2-1.3l3.2-0.9l3.2-0.6l4.8-0.6l4.8-0.3l8-0.2
+					l14.4-0.1l51,0l6.4,0l0,0"/>
+			</g>
+		</g>
+		<rect x="28" y="23" class="st1" width="279" height="135.9"/>
+		<g class="st2">
+			<line class="st3" x1="40.7" y1="162.4" x2="40.7" y2="158.9"/>
+			<path class="st3" d="M72.6,162.4v-3.5V162.4z"/>
+			<path class="st3" d="M104.5,162.4v-3.5V162.4z"/>
+			<path class="st3" d="M136.4,162.4v-3.5V162.4z"/>
+			<path class="st3" d="M168.3,162.4v-3.5V162.4z"/>
+			<path class="st3" d="M200.2,162.4v-3.5V162.4z"/>
+			<path class="st3" d="M232.1,162.4v-3.5V162.4z"/>
+			<path class="st3" d="M264,162.4v-3.5V162.4z"/>
+			<path class="st3" d="M295.9,162.4v-3.5V162.4z"/>
+		</g>
+		<g class="st2">
+			<line class="st3" x1="28" y1="152.9" x2="24.5" y2="152.9"/>
+			<path class="st3" d="M28,128.2h-3.5H28z"/>
+			<path class="st3" d="M28,103.4h-3.5H28z"/>
+			<path class="st3" d="M28,78.7h-3.5H28z"/>
+			<path class="st3" d="M28,53.9h-3.5H28z"/>
+			<path class="st3" d="M28,29.2h-3.5H28z"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 12.5208 155.667)" class="st4 st5 st6">0</text>
+<text transform="matrix(1 0 0 1 6.6556 130.8703)" class="st4 st5 st6">0.2</text>
+<text transform="matrix(1 0 0 1 6.6556 106.0738)" class="st4 st5 st6">0.4</text>
+<text transform="matrix(1 0 0 1 6.6556 81.2772)" class="st4 st5 st6">0.6</text>
+<text transform="matrix(1 0 0 1 6.6556 56.4813)" class="st4 st5 st6">0.8</text>
+<text transform="matrix(1 0 0 1 6.6556 31.6849)" class="st4 st5 st6">1.0</text>
+<text transform="matrix(1 0 0 1 32.5917 176.8626)" class="st4 st5 st6">-10.0</text>
+<text transform="matrix(1 0 0 1 66.4972 176.8626)" class="st4 st5 st6">-7.5</text>
+<text transform="matrix(1 0 0 1 98.401 176.8626)" class="st4 st5 st6">-5.0</text>
+<text transform="matrix(1 0 0 1 130.3051 176.8626)" class="st4 st5 st6">-2.5</text>
+<text transform="matrix(1 0 0 1 166.2681 176.8626)" class="st4 st5 st6">0</text>
+<text transform="matrix(1 0 0 1 195.2394 176.8626)" class="st4 st5 st6">2.5</text>
+<text transform="matrix(1 0 0 1 227.1433 176.8626)" class="st4 st5 st6">5.0</text>
+<text transform="matrix(1 0 0 1 259.0471 176.9599)" class="st4 st5 st6">7.5</text>
+<text transform="matrix(1 0 0 1 288.9496 177.0578)" class="st4 st5 st6">10.0</text>
+<text transform="matrix(1 0 0 1 269.0244 17.3018)" class="st4 st5 st7">F(x)=1/(1+e-x)</text>
+<text transform="matrix(1 0 0 1 28.6466 17.3019)" class="st4 st5 st8">Sigmoid</text>
+</svg>

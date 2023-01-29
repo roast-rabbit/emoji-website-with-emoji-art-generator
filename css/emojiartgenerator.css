@@ -1,0 +1,75 @@
+#current-selection {
+  margin-bottom: 10px;
+}
+
+#current-selection span:hover {
+  cursor: pointer;
+}
+
+#board {
+  font-size: 8vmin;
+  user-select: none;
+  display: inline-grid;
+  grid-column-start: 2;
+  grid-template-columns: repeat(var(--width), var(--size));
+  grid-template-rows: repeat(var(--height), var(--size));
+}
+
+.tile {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#side-tool-set {
+  /* margin-bottom: 10px; */
+  display: none;
+}
+#side-tool-set.shown {
+  /* margin-bottom: 10px; */
+
+  position: absolute;
+  display: block;
+}
+
+#copy {
+  /* padding: 10px 20px; */
+  border: none;
+  cursor: pointer;
+  /* grid-column-start: 2; */
+  /* justify-self: start;
+   */
+  display: inline-block;
+}
+
+#current-selection span:hover {
+  background-color: #a8c6e6b3;
+}
+#current-selection {
+  transition: all 0.5s;
+}
+.picmo__picker .picmo__categoryButtons {
+  overflow: hidden;
+  overflow-x: auto;
+}
+.picmo__searchField {
+  height: auto !important;
+}
+.picmo__picker {
+  --category-count: 7 !important;
+  --emojis-per-row: 6 !important;
+  --row-count: 6 !important;
+  --emoji-size: 2rem !important;
+}
+@media (min-width: 768px) {
+  .picmo__picker {
+    --category-count: 10 !important;
+    --emojis-per-row: 7 !important;
+    --row-count: 6 !important;
+    --emoji-size: 2rem !important;
+  }
+  .picmo__picker .picmo__categoryButtons {
+    overflow: hidden;
+  }
+}
