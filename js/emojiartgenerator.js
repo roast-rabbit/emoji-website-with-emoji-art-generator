@@ -1,5 +1,7 @@
 import { createPicker } from "https://unpkg.com/picmo@latest/dist/index.js";
 
+import { state, setState, undo, index } from "./emojiArtGenerateState.js";
+
 let emojiData;
 let messages;
 
@@ -9,6 +11,7 @@ const widthInput = document.querySelector("#stats input[name=width]");
 const board = document.querySelector("#board");
 
 const currentSelection = document.querySelector("#current-selection span");
+const undoBtn = document.querySelector("#undo");
 
 const resizeBtn = document.querySelector("#resize");
 
@@ -30,15 +33,23 @@ const link = encodeURI(window.location.href);
 
 // Current emoji art text
 let currentText = "";
+let lastUsedText = "";
+let emojiTextArr = [{ key: null, value: null }];
 
-function setCurrentText() {
-  currentText = "";
-  const tiles = document.querySelectorAll(".tile");
-  for (let i = 0; i < height; i++) {
-    for (let j = 0; j < width; j++) {
-      currentText += tiles[i * height + j].textContent;
+function setCurrentText(newText) {
+  if (newText) {
+    currentText = newText;
+  } else {
+    currentText = "";
+    const tiles = document.querySelectorAll(".tile");
+    if (tiles) {
+      for (let i = 0; i < height; i++) {
+        for (let j = 0; j < width; j++) {
+          currentText += tiles[i * height + j].textContent;
+        }
+        currentText += "\n";
+      }
     }
-    currentText += "\n";
   }
 }
 
@@ -54,9 +65,8 @@ let lang = getLangCode();
 function getLangCode() {
   const lang = document.querySelector("html").getAttribute("lang");
   return lang;
-  // return "de";
 }
-// getLangCode();
+
 async function getEmojiData() {
   const emojiDataResponse = await fetch(`./js/${lang}/data.json`);
   emojiData = await emojiDataResponse.json();
@@ -70,11 +80,17 @@ async function getMessages() {
 }
 
 // Create the picker
-
 emojiData = await getEmojiData();
 
 messages = await getMessages();
-console.log(emojiData);
+
+/**
+ *
+ * @param {*} string
+ * @returns array of characters
+ */
+const splitEmoji = (string) => [...new Intl.Segmenter().segment(string)].map((x) => x.segment);
+
 const lastUsedLocal = localStorage.getItem("lastUsedLocal");
 if (lastUsedLocal !== lang) {
   indexedDB.deleteDatabase("PicMo-en");
@@ -87,10 +103,6 @@ const picker = createPicker({
   messages,
   i18n: "de",
 });
-
-document.querySelector(".picmo__picker.picmo__picker").style.setProperty("--picker-width", "100px");
-
-sideToolSet.style.zIndex = "1";
 
 let height = heightInput.value;
 let width = widthInput.value;
@@ -108,12 +120,16 @@ function createBoard(height, width) {
       const element = document.createElement("div");
       element.textContent = "⬜️";
       element.classList.add("tile");
+      const key = i * parseInt(height) + j + 1;
+      element.setAttribute("key", key);
       board.appendChild(element);
     }
   }
 }
 
 createBoard(height, width);
+setCurrentText();
+setState(currentText);
 
 const setEmojiToTarget = (e) => {
   e.preventDefault();
@@ -125,7 +141,24 @@ const setEmojiToTarget = (e) => {
   } else {
     targetTile = e.target.closest(".tile");
   }
-  if (targetTile) targetTile.textContent = currentSelectedEmoji;
+
+  if (targetTile) {
+    const lastText = emojiTextArr[emojiTextArr.length - 1];
+    // console.log(`lastText.value: ${lastText.value}`);
+    // console.log(`currentSelectedEmoji: ${currentSelectedEmoji}`);
+
+    if (
+      lastText &&
+      lastText.key !== targetTile.getAttribute("key") &&
+      lastText.value !== currentSelectedEmoji
+    ) {
+      emojiTextArr.push({ key: targetTile.getAttribute("key"), value: targetTile.textContent });
+    }
+
+    targetTile.textContent = currentSelectedEmoji;
+  }
+
+  // console.log(emojiTextArr);
 
   setCurrentText();
   msg = encodeURIComponent(`I created an emoji art\n${currentText}`);
@@ -136,6 +169,7 @@ const setEmojiToTarget = (e) => {
 const openEmojiPicker = function () {
   sideToolSet.classList.add("shown");
 };
+
 const closeEmojiPicker = function () {
   sideToolSet.classList.remove("shown");
 };
@@ -154,10 +188,6 @@ board.addEventListener("click", setEmojiToTarget);
 board.addEventListener("mousedown", (e) => {
   e.preventDefault();
   board.addEventListener("mousemove", setEmojiToTarget);
-
-  // document.addEventListener("mouseup", () => {
-  //   board.removeEventListener("mousemove", setEmojiToTarget);
-  // });
 });
 
 board.addEventListener("touchstart", (e) => {
@@ -166,10 +196,18 @@ board.addEventListener("touchstart", (e) => {
   board.addEventListener("touchmove", setEmojiToTarget);
 });
 
-document.addEventListener("mouseup", () => {
+board.addEventListener("mouseup", () => {
+  // if (lastUsedText) {
+  //   setState(lastUsedText);
+  // }
+  // lastUsedText = currentText;
+  setState(currentText);
+  console.log(state);
   board.removeEventListener("mousemove", setEmojiToTarget);
 });
-
+board.addEventListener("mouseleave", () => {
+  board.removeEventListener("mousemove", setEmojiToTarget);
+});
 document.addEventListener("touchend", () => {
   board.removeEventListener("touchmove", setEmojiToTarget);
 });
@@ -203,11 +241,10 @@ body.addEventListener("click", (e) => {
 async function copyText(e) {
   e.preventDefault();
   const { clipboard } = navigator;
-  // console.log("copy!");
 
   await clipboard.writeText(currentText);
-  // console.log(text);
 }
+
 copyBtn.addEventListener("click", copyText);
 
 async function getScreenShot(e) {
@@ -223,27 +260,48 @@ async function getScreenShot(e) {
     canvas.toDataURL("image/png").replace("image/png", "image/octet-stream")
   );
   link.click();
-  // html2canvas(c).then((canvas) => {
-  //   const link = document.createElement("a");
-  //   document.body.appendChild(link);
-  //   link.setAttribute("download", "emoji-art.png");
-  //   link.setAttribute(
-  //     "href",
-  //     canvas.toDataURL("image/png").replace("image/png", "image/octet-stream")
-  //   );
-  //   link.click();
-  // });
 }
 toPicBtn.addEventListener("click", getScreenShot);
 
-function getCurrentEmojiArtText() {
-  let text = "";
-  const tiles = document.querySelectorAll(".tile");
-  for (let i = 0; i < height; i++) {
-    for (let j = 0; j < width; j++) {
-      text += tiles[i * height + j].textContent;
-    }
-    text += "\n";
+// function getCurrentEmojiArtText() {
+//   let text = "";
+//   const tiles = document.querySelectorAll(".tile");
+//   for (let i = 0; i < height; i++) {
+//     for (let j = 0; j < width; j++) {
+//       text += tiles[i * height + j].textContent;
+//     }
+//     text += "\n";
+//   }
+//   return text;
+// }
+
+undoBtn.addEventListener("click", () => {
+  // const { key: lastKey, value: lastValue } = emojiTextArr.pop();
+  // const toUndoTile = document.querySelector(`.tile[key="${lastKey}"]`);
+  // toUndoTile.textContent = lastValue;
+  // console.log(state);
+  if (state[state.length - 1] === currentText) {
+    undo();
   }
-  return text;
+  setCurrentText(undo());
+
+  renderBoardWithCurrentEmojiText();
+});
+
+function renderBoardWithCurrentEmojiText() {
+  console.log("hello world");
+  const tiles = Array.from(document.querySelectorAll(".tile"));
+  console.log(currentText);
+  let currentTextArr = currentText.split("\n");
+  currentTextArr = currentTextArr.map((arr) => {
+    return splitEmoji(arr);
+  });
+
+  if (tiles) {
+    for (let i = 0; i < height; i++) {
+      for (let j = 0; j < width; j++) {
+        tiles[i * height + j].textContent = currentTextArr[i][j];
+      }
+    }
+  }
 }
